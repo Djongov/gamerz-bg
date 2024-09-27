@@ -70,16 +70,3 @@ This is <Highlight color="#1877F2">Facebook blue</Highlight> !
 \* Without the backslash, this would be a bullet in an unordered list.
 
 This **word** is bold. This <em>word</em> is italic.
-
-## Mermaid Charts
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-flowchart LR
-    id1{This is the text in the box}
