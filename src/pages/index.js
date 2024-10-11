@@ -4,23 +4,20 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import styles from './index.module.css';  // Custom CSS file
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+export function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
+    <header className={clsx(styles.homepageHeader)}>
+      <div className={clsx("container", styles.headerContainer)}>
+        <img
+          src="/img/2020-Profile.jpg"  // Path to the image
+          alt="profile"
+          className={clsx(styles.profileImage)}  // Using custom styles
+        />
+        <h1 className={clsx(styles.headerTitle)}>{siteConfig.title}</h1>
+        <p className={clsx(styles.headerTagline)}>{siteConfig.tagline}</p>
       </div>
     </header>
   );
@@ -30,8 +27,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`@Djongov`}
+      description="This is the dev blog of @Djongov, where you can find PHP, Javascript, Powershell, Terraform and much more code snippets and info as well as blogs about implementations.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

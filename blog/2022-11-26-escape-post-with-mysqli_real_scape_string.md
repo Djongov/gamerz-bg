@@ -19,5 +19,6 @@ foreach ($_POST as $key=>$value) {
     $_POST[$key] = mysqli_real_escape_string($conn, $_POST[$key]);
 }
 ```
+<!-- truncate -->
 
 Also good to note that you should always use prepared statements and do not rely on this function alone for security. I personally use this function not as a security measure but to fix dynamic SQL statements that otherwise break my synthax.
