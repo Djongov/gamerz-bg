@@ -89,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'PHP',
-                to: '/docs/PHP',
+                to: '/docs/PHP/tags/php',
               },
             ],
           },

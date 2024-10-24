@@ -7,8 +7,14 @@ tags:
 
 Here is how you can empty your state:
 
-``` jsx title="terraform"
+``` hcl title="terraform"
 for resource in $(terraform state list); do
     terraform state rm $resource
 done
+```
+
+another way is to run this single command
+
+``` hcl title="terraform"
+terraform state list | xargs -n1 terraform state rm
 ```
