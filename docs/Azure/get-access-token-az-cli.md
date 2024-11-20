@@ -9,7 +9,7 @@ tags:
 Sometimes you need to get an access token for the currently logged in user in Az cli.
 
 ``` az cli title="az cli access token"
-az account get-access-token --resource https://management.azure.com/
+az account get-access-token --resource=https://management.azure.com --output tsv --query accessToken
 ```
 
 ## Possible Values for `--resource`
