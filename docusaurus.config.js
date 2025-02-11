@@ -85,15 +85,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'PHP',
-                to: '/docs/PHP/tags/php',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
