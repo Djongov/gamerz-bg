@@ -18,3 +18,15 @@ another way is to run this single command
 ``` hcl title="terraform"
 terraform state list | xargs -n1 terraform state rm
 ```
+
+In PowerShell, you can do these:
+
+```powershell
+$resources = terraform state list
+```
+
+and then
+
+```powershell
+$resources | ForEach-Object { terraform state rm "$_" }
+```
