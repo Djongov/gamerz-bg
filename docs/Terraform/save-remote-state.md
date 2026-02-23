@@ -7,6 +7,10 @@ tags:
 
 Here is how you can run save current remote state to a local file (for backup mostly):
 
-``` hcl title="PowerShell"
+``` PowerShell title="PowerShell"
 terraform state pull > backup-$(Get-Date -Format "yyyyMMdd-HHmmss").tfstate
+```
+
+``` bash title="bash"
+terraform state pull > backup-$(date +"%Y%m%d-%H%M%S").tfstate
 ```
